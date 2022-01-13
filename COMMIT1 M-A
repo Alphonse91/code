@@ -1,5 +1,19 @@
 
 premeier comMit ajout des fichiers
+ name: "Installation d'Apache"
+  hosts: "front"
+  gather_facts : no
+  tasks:
+    - name: "Installation du package apache"
+      package:
+        name: "httpd"
+        state: present
+    - name: "Activater le service apache"
+      service:
+        name: "httpd"
+        state: started
+        enabled: yes
+
 # Veuillez saisir le message de validation pour vos modifications. Les lignes
 # commençant par '#' seront ignorées, et un message vide abandonne la validation.
 #
