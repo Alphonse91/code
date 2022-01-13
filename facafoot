@@ -1,0 +1,14 @@
+- name: "Installation d'Apache"
+  hosts: "front"
+  gather_facts : no
+  tasks:
+    - name: "Installation du package apache"
+      package:
+        name: "httpd"
+        state: present
+    - name: "Activater le service apache"
+      service:
+        name: "httpd"
+        state: started
+        enabled: yes
+~                       
