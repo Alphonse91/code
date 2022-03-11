@@ -1,6 +1,5 @@
-FROM centos:latest
+FROM nginx:latest
 RUN apt-get  update && apt install -y
-RUN apt-get install vim
 RUN mkdir lepro
 WORKDIR /lepro
 RUN touch grespo
