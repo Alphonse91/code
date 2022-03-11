@@ -1,7 +1,7 @@
-FROM: centos:latest
-run: apt-get  update && apt install -y
-run: apt-get install vim
-run: mkdir lepro
-WORKDIR: lepro/
-run: touch grespo
-run: chmod +x grespo
+FROM centos:latest
+RUN apt-get  update && apt install -y
+RUN apt-get install vim
+RUN mkdir lepro
+WORKDIR /lepro
+RUN touch grespo
+RUN chmod +x grespo
